@@ -1,0 +1,11 @@
+# docker compose --file .\docker\docker-compose.yml up --build
+
+services:
+  front:
+    build: .
+    working_dir: ${DIR}
+    command: "bash docker/script.sh"
+    volumes:
+      - "../:${DIR}"
+    ports:
+      - "4200:4200"
