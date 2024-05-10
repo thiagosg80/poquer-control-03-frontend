@@ -1,0 +1,40 @@
+@import 'themes/_colors';
+
+// mat-grid-list {
+//   mat-card {
+//     width: 100%;
+//     margin: 0 5px;
+//     mat-card-header {
+//       padding-top: 20px;
+//       border-bottom: 1px solid $grey01;
+//       mat-card-title {
+//         font-size: 2em
+//       }
+//     }
+//   }
+// }
+
+// mat-card.matcard-one {
+//   height: 90%
+// }
+
+// mat-card.matcard-two {
+//   height: 95%;
+//   padding: 0
+// }
+  
+// mat-card.matcard-three {
+//   height: 45%;
+// }
+
+mat-grid-tile {
+    border: 1px solid red;
+}
+
+.matcard-one {
+    height: 95%;
+}
+
+.matcard-three {
+    height: 45%;
+}
