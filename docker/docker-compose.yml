@@ -1,4 +1,4 @@
-# docker compose --file .\docker\docker-compose.yml up --build
+# docker compose --file .\docker\docker-compose.yml up --watch --build
 
 services:
   front:
@@ -9,3 +9,8 @@ services:
       - "../:${DIR}"
     ports:
       - "4200:4200"
+    develop:
+      watch:
+        - path: ../src/
+          target: /app/src/
+          action: sync
