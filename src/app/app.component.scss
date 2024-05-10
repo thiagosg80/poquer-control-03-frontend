@@ -1,40 +1,37 @@
-@import 'themes/_colors';
-
-// mat-grid-list {
-//   mat-card {
-//     width: 100%;
-//     margin: 0 5px;
-//     mat-card-header {
-//       padding-top: 20px;
-//       border-bottom: 1px solid $grey01;
-//       mat-card-title {
-//         font-size: 2em
-//       }
-//     }
-//   }
-// }
-
-// mat-card.matcard-one {
-//   height: 90%
-// }
-
-// mat-card.matcard-two {
-//   height: 95%;
-//   padding: 0
-// }
-  
-// mat-card.matcard-three {
-//   height: 45%;
-// }
-
-mat-grid-tile {
-    border: 1px solid red;
+.flexed {
+    display: flex;
 }
 
-.matcard-one {
-    height: 95%;
+.width30 {
+    width: 30%;
 }
 
-.matcard-three {
-    height: 45%;
+.width70 {
+    width: 70%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.height100 {
+    height: 100%;
+}
+
+.grow1 {
+    flex-grow: 1;
+}
+
+.column-flexed {
+    display: flex;
+    flex-direction: column;
+}
+
+.padb {
+    padding-bottom: 10px;
+}
+
+.padbr {
+    @extend .padb;
+    padding-right: 10px;
 }
