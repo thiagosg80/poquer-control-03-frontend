@@ -18,8 +18,9 @@
     <div class="width70">
         <div class="padb">
             <mat-card>
-                <mat-card-content>
-                    timer
+                <mat-card-content class="padding-0-mat-card-content">
+                    <app-timer [duration]="period.duration" [load]="load" [crono]="crono">
+                    </app-timer>
                 </mat-card-content>
             </mat-card>
         </div>
@@ -83,7 +84,8 @@
 <div class="flexed">
     <mat-card class="width100">
         <mat-card-content>
-            botao
+            <app-buttons [crono]="crono">
+            </app-buttons>
         </mat-card-content>
     </mat-card>
 </div>
