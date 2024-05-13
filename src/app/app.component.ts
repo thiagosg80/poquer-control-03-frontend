@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { Period } from './components/period/model/period';
-import { Duration } from './components/period/model/duration';
+import { Period } from './components/periods/model/period';
+import { Duration } from './components/periods/model/duration';
 import { Load } from './model/load';
 import { Crono } from './model/crono';
+import { Bet } from './components/periods/model/bet';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ export class AppComponent {
   duration: Duration = new Duration;
   load: Load = new Load;
   crono: Crono = new Crono;
+  nextBet: Bet = new Bet;
   
   constructor() {
     this.duration.minutes = 1;

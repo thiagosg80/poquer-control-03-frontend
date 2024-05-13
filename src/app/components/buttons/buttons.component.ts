@@ -3,8 +3,7 @@ import { Crono } from 'src/app/model/crono';
 
 @Component({
   selector: 'app-buttons',
-  templateUrl: './buttons.component.html',
-  styleUrls: ['./buttons.component.css']
+  templateUrl: './buttons.component.html'
 })
 export class ButtonsComponent {
   private _crono: Crono = new Crono;

@@ -1,5 +1,5 @@
 import { Component, DoCheck, Input, KeyValueDiffers, OnInit } from '@angular/core';
-import { Duration } from '../period/model/duration';
+import { Duration } from '../periods/model/duration';
 import { Style } from './model/style';
 import { TimerStyleService } from './service/timer-style.service';
 import { Timeparam } from './model/timeparam';

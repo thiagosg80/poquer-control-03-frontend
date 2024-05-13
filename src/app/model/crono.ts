@@ -1,4 +1,4 @@
-import { Duration } from "../components/period/model/duration";
+import { Duration } from "../components/periods/model/duration";
 
 export class Crono {
     isOverTime: boolean = false;
