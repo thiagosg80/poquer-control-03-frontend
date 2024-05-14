@@ -12,6 +12,7 @@ import { MontanteComponent } from './components/montante/montante.component';
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
 import { AwardComponent } from './components/award/award.component';
+import { FightComponent } from './components/fight/fight.component';
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -21,7 +22,8 @@ registerLocaleData(ptBr);
     ButtonsComponent,
     PeriodsComponent,
     MontanteComponent,
-    AwardComponent
+    AwardComponent,
+    FightComponent
   ],
   imports: [
     BrowserModule,

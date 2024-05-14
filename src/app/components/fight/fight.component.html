@@ -1,0 +1,19 @@
+<div *ngIf="isLoading">
+    <mat-progress-bar mode="indeterminate">
+    </mat-progress-bar>
+</div>
+<div *ngIf="!isLoading" class="flexed">
+    <div>
+        Jogando
+    </div>
+    <div class="info-content grow1">
+        {{playing}} / {{total}}
+    </div>
+    <div>
+        <button mat-mini-fab color="primary" (click)="reloadFight()">
+            <mat-icon>
+                refresh
+            </mat-icon>
+        </button>
+    </div>
+</div>
