@@ -75,7 +75,7 @@ export class TimerComponent implements OnInit, DoCheck {
   private intervalId: any;
 
   private countDownTime(minutes: number, seconds: number): void {
-    this.intervalId = setInterval(this.intervalCallback(minutes, seconds), 100);
+    this.intervalId = setInterval(this.intervalCallback(minutes, seconds), 1000);
   }
 
   private MAX_SECONDS = 59;
