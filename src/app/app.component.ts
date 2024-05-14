@@ -19,8 +19,8 @@ export class AppComponent {
   nextBet: Bet = new Bet;
   
   constructor() {
-    this.duration.minutes = 1;
-    this.duration.seconds = 3;
+    this.duration.minutes = 0;
+    this.duration.seconds = 0;
     this.period.duration = this.duration;
     this.load.isLoadingPeriods = false;
   }

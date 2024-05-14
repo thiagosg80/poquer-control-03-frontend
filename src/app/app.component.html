@@ -74,14 +74,17 @@
             <div class="grow1 padbr">
                 <mat-card>
                     <mat-card-content>
-                        antes
+                        <app-montante label="Antes" [value]="period.bet.ante" [crono]="crono"
+                                      additionalStyle="highlight-content">
+                        </app-montante>
                     </mat-card-content>
                 </mat-card>
             </div>
             <div class="grow1">
                 <mat-card>
                     <mat-card-content>
-                        next antes
+                        <app-montante label="Próximo Antes" [value]="nextBet.ante" [crono]="crono">
+                        </app-montante>
                     </mat-card-content>
                 </mat-card>
             </div>
