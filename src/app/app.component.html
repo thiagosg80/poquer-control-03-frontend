@@ -55,7 +55,9 @@
             <div class="grow1 padbr">
                 <mat-card>
                     <mat-card-content>
-                        big
+                        <app-montante label="Big Blind" [value]="period.bet.bigBlind" [crono]="crono"
+                                      additionalStyle="highlight-content">
+                        </app-montante>
                     </mat-card-content>
                 </mat-card>
             </div>
