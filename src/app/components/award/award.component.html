@@ -1,0 +1,26 @@
+<div *ngIf="isLoading">
+    <mat-progress-bar mode="indeterminate">
+    </mat-progress-bar>
+</div>
+<div *ngIf="!isLoading">
+    <div class="flexed">
+        <div class="grow1">
+            Premia&ccedil;&otilde;es
+        </div>
+        <div>
+            <button mat-mini-fab color="primary" (click)="reloadAwards()">
+                <mat-icon>
+                    refresh
+                </mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="total-container">
+        Total: R$ {{monetary.total | number: '1.2-2' : 'pt'}}.
+    </div>
+    <div>
+        <div *ngFor="let award of monetary.awards" class="award-content">
+            {{award.position}}&#186; - R$ {{award.quantity | number: '1.2-2' : 'pt'}} ({{award.percent}}%)
+        </div>
+    </div>
+</div>

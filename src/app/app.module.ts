@@ -11,6 +11,7 @@ import { PeriodsComponent } from './components/periods/periods.component';
 import { MontanteComponent } from './components/montante/montante.component';
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
+import { AwardComponent } from './components/award/award.component';
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -19,7 +20,8 @@ registerLocaleData(ptBr);
     TimerComponent,
     ButtonsComponent,
     PeriodsComponent,
-    MontanteComponent
+    MontanteComponent,
+    AwardComponent
   ],
   imports: [
     BrowserModule,
