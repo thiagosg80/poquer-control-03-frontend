@@ -46,10 +46,12 @@ export class PeriodsComponent implements OnInit, DoCheck {
   get nextbet() { return this._nextbet; }
   set nextbet(nextbet: Bet) { this._nextbet = nextbet}
 
+  nextBet: Bet = new Bet;
+
   private processSuccess(periods: Period[]): void {
     this.periods = periods;
     this.currentPeriod = this.getCurrent(this.periods);
-    this._nextbet = this.getNextBet(this.periods);
+    this.nextBet = this.getNextBet(this.periods);
     this.periodIdDisplay = this.currentPeriod.id;
     this.setInfos();
   }
@@ -63,7 +65,7 @@ export class PeriodsComponent implements OnInit, DoCheck {
       if (this.crono.isOverTime) {
         this.currentPeriod.isFinish = true;
         this.currentPeriod = this.getCurrent(this.periods);
-        this._nextbet = this.getNextBet(this.periods);
+        this.nextBet = this.getNextBet(this.periods);
         this.setInfos();
       }
 
@@ -93,10 +95,12 @@ export class PeriodsComponent implements OnInit, DoCheck {
     const duration = this.currentPeriod.duration || new Duration;
     this._period.duration.minutes = duration.minutes;
     this._period.duration.seconds = duration.seconds;
-
     const bet = this.currentPeriod.bet || new Bet;
     this._period.bet.smallBlind = bet.smallBlind;
     this._period.bet.bigBlind = bet.bigBlind;
     this._period.bet.ante = bet.ante;
+    this._nextbet.smallBlind = this.nextBet.smallBlind;
+    this._nextbet.bigBlind = this.nextBet.bigBlind;
+    this._nextbet.ante = this.nextBet.ante;
   }
 }
