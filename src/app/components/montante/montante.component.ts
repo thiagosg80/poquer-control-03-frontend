@@ -3,8 +3,7 @@ import { Crono } from 'src/app/model/crono';
 
 @Component({
   selector: 'app-montante',
-  templateUrl: './montante.component.html',
-  styleUrls: ['./montante.component.css']
+  templateUrl: './montante.component.html'
 })
 export class MontanteComponent implements DoCheck {
   @Input()
