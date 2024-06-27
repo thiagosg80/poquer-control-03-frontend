@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared-modules/material.module';
 import { TimerComponent } from './components/timer/timer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { PeriodsComponent } from './components/periods/periods.component';
 import { MontanteComponent } from './components/montante/montante.component';
@@ -15,23 +15,16 @@ import { AwardComponent } from './components/award/award.component';
 import { FightComponent } from './components/fight/fight.component';
 registerLocaleData(ptBr);
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    TimerComponent,
-    ButtonsComponent,
-    PeriodsComponent,
-    MontanteComponent,
-    AwardComponent,
-    FightComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        TimerComponent,
+        ButtonsComponent,
+        PeriodsComponent,
+        MontanteComponent,
+        AwardComponent,
+        FightComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        MaterialModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
