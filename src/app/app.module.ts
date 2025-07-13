@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared-modules/material.module';
 import { TimerComponent } from './components/timer/timer.component';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withFetch, withInterceptorsFromDi } from '@angular/common/http';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { PeriodsComponent } from './components/periods/periods.component';
 import { MontanteComponent } from './components/montante/montante.component';
@@ -26,5 +26,5 @@ registerLocaleData(ptBr);
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         BrowserAnimationsModule,
-        MaterialModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        MaterialModule], providers: [provideHttpClient(withInterceptorsFromDi(), withFetch())] })
 export class AppModule { }
