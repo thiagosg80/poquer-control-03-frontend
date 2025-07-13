@@ -3,9 +3,10 @@ import { FightService } from './service/fight.service';
 import { SnackBarService } from 'src/app/service/snack-bar.service';
 
 @Component({
-  selector: 'app-fight',
-  templateUrl: './fight.component.html',
-  styleUrls: ['./fight.component.css']
+    selector: 'app-fight',
+    templateUrl: './fight.component.html',
+    styleUrls: ['./fight.component.css'],
+    standalone: false
 })
 export class FightComponent implements OnInit {
   constructor(private fightService: FightService, private snackBarService: SnackBarService) {}

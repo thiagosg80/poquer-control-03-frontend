@@ -1,7 +1,7 @@
-@import 'app/themes/_colors';
+@use 'app/themes/colors';
 
 body {
-    background-color: $grey01;
+    background-color: colors.$grey01;
     font-family: sans-serif;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 .highlight-content {
-  color: $red01;
+  color: colors.$red01;
 }
 
 .right-content {

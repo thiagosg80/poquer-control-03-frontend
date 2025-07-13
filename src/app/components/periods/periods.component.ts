@@ -8,8 +8,9 @@ import { Bet } from './model/bet';
 import { Duration } from './model/duration';
 
 @Component({
-  selector: 'app-periods',
-  templateUrl: './periods.component.html'
+    selector: 'app-periods',
+    templateUrl: './periods.component.html',
+    standalone: false
 })
 export class PeriodsComponent implements OnInit, DoCheck {
   periodIdDisplay: number = 0;

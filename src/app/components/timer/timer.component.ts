@@ -9,9 +9,10 @@ import { SnackBarService } from 'src/app/service/snack-bar.service';
 import { Crono } from 'src/app/model/crono';
 
 @Component({
-  selector: 'app-timer',
-  templateUrl: './timer.component.html',
-  styleUrls: ['./timer.component.css']
+    selector: 'app-timer',
+    templateUrl: './timer.component.html',
+    styleUrls: ['./timer.component.css'],
+    standalone: false
 })
 export class TimerComponent implements OnInit, DoCheck {
 

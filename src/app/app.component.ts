@@ -6,9 +6,10 @@ import { Crono } from './model/crono';
 import { Bet } from './components/periods/model/bet';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
   title = 'poquer-control-03-frontend';

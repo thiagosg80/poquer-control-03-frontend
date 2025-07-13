@@ -2,8 +2,9 @@ import { Component, DoCheck, Input, KeyValueDiffers } from '@angular/core';
 import { Crono } from 'src/app/model/crono';
 
 @Component({
-  selector: 'app-montante',
-  templateUrl: './montante.component.html'
+    selector: 'app-montante',
+    templateUrl: './montante.component.html',
+    standalone: false
 })
 export class MontanteComponent implements DoCheck {
   @Input()

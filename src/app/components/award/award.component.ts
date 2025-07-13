@@ -4,9 +4,10 @@ import { SnackBarService } from 'src/app/service/snack-bar.service';
 import { Monetary } from './model/monetary';
 
 @Component({
-  selector: 'app-award',
-  templateUrl: './award.component.html',
-  styleUrls: ['./award.component.css']
+    selector: 'app-award',
+    templateUrl: './award.component.html',
+    styleUrls: ['./award.component.css'],
+    standalone: false
 })
 export class AwardComponent implements OnInit {
   constructor(private monetaryService: MonetaryService, private snackBarService: SnackBarService) {}

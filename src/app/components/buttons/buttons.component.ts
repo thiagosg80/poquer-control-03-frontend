@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import { Crono } from 'src/app/model/crono';
 
 @Component({
-  selector: 'app-buttons',
-  templateUrl: './buttons.component.html'
+    selector: 'app-buttons',
+    templateUrl: './buttons.component.html',
+    standalone: false
 })
 export class ButtonsComponent {
   private _crono: Crono = new Crono;
