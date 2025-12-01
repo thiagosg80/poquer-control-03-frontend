@@ -1,16 +1,16 @@
-# docker compose --file .\docker\docker-compose.yml up --watch --build
+# docker compose --file .\docker\docker-compose.yml up --build
 
 services:
   front:
     build: .
     working_dir: ${DIR}
-    command: "bash docker/script.sh"
+    command:
+      - /bin/bash
+      - -c
+      - "npm install -g @angular/cli@20.1.0 && \
+         npm install && \
+         ng serve --host=0.0.0.0 --poll 2000"
     volumes:
       - "../:${DIR}"
     ports:
       - "4200:4200"
-    develop:
-      watch:
-        - path: ../src/
-          target: /app/src/
-          action: sync
