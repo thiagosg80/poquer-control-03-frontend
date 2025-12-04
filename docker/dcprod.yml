@@ -1,0 +1,10 @@
+# docker compose --file .\docker\dcprod.yml up --build
+# Don't forget build app with ng build --configuration production
+
+services:
+  frontprod:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile-prod
+    ports:
+      - "8081:80"
