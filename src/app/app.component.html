@@ -44,16 +44,6 @@
                     </mat-card-content>
                 </mat-card>
             </div>
-            <div class="grow1">
-                <mat-card>
-                    <mat-card-content>
-                        <app-montante label="Próximo Small Blind" [value]="nextBet.smallBlind" [crono]="crono">
-                        </app-montante>
-                    </mat-card-content>
-                </mat-card>
-            </div>
-        </div>
-        <div class="flexed">
             <div class="grow1 padbr">
                 <mat-card>
                     <mat-card-content>
@@ -66,7 +56,8 @@
             <div class="grow1">
                 <mat-card>
                     <mat-card-content>
-                        <app-montante label="Próximo Big Blind" [value]="nextBet.bigBlind" [crono]="crono">
+                        <app-montante label="Antes" [value]="period.bet.ante" [crono]="crono"
+                                      additionalStyle="highlight-content">
                         </app-montante>
                     </mat-card-content>
                 </mat-card>
@@ -76,8 +67,15 @@
             <div class="grow1 padbr">
                 <mat-card>
                     <mat-card-content>
-                        <app-montante label="Antes" [value]="period.bet.ante" [crono]="crono"
-                                      additionalStyle="highlight-content">
+                        <app-montante label="Próximo Small Blind" [value]="nextBet.smallBlind" [crono]="crono">
+                        </app-montante>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="grow1 padbr">
+                <mat-card>
+                    <mat-card-content>
+                        <app-montante label="Próximo Big Blind" [value]="nextBet.bigBlind" [crono]="crono">
                         </app-montante>
                     </mat-card-content>
                 </mat-card>
